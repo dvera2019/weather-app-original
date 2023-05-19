@@ -1,0 +1,44 @@
+h1 {
+  color: blue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+li {
+  list-style: none;
+}
+.container {
+  padding: 20px;
+  margin-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.upcoming-weather {
+  padding: 20px;
+  margin: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  margin: 0 0 20px;
+  padding: 0;
+}
+.weather-app {
+  border: 1px solid;
+  padding: 30px;
+  margin: 30px;
+  max-width: 630px;
+  margin: auto;
+  border-radius: 20px;
+}
+.temperature {
+  font-size: xx-large;
+}
+a {
+  text-decoration: none;
+}
+.position {
+  position: relative;
+  top: -49px;
+  left: 65px;
+}
+.current-button {
+  position: relative;
+  left: 65px;
+}
