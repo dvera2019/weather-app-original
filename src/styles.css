@@ -20,11 +20,10 @@ ul {
   padding: 0;
 }
 .weather-app {
-  border: 1px solid;
+  border: 1px solid #dadde1;
   padding: 30px;
-  margin: 30px;
+  margin: 30px auto;
   max-width: 630px;
-  margin: auto;
   border-radius: 20px;
 }
 .temperature {
