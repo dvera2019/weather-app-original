@@ -23,7 +23,7 @@ function formatDate(date) {
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -38,19 +38,19 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
 }
-function searchCity(city) {
-  let apiKey = "d0b47501e635c850d52dd6e5e7f1abeb";
+function search(city) {
+  let apiKey = "0bfe478a8b8a7te3aao74dc34b69a3b6";
   let units = "metric";
-  let weatherAppMeetPoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${weatherAppMeetPoint}?q=${city}&appid=${apiKey}&units=${units}`;
+  //let weatherAppMeetPoint = "https://api.shecodes.io/weather/v1/current";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showTemperature);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 function searchLocation(position) {
   let apiKey = "d0b47501e635c850d52dd6e5e7f1abeb";
@@ -73,4 +73,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+search("New York");
